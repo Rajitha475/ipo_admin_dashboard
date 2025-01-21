@@ -14,7 +14,7 @@ function App() {
         <h2>Menu</h2>
         <ul>
           <li><a href="/" className="active"><i className="fa-solid fa-chart-simple"></i> Dashboard</a></li>
-          <li><a href="/Manageipo"><i className="fa-solid fa-cart-shopping"></i> Manage IPO</a></li>
+          <li><a href="#"><i className="fa-solid fa-cart-shopping"></i> Manage IPO</a></li>
           <li><a href="#"><i className="fa-regular fa-chart-bar"></i> IPO Subscription</a></li>
           <li><a href="#"><i className="fa-regular fa-comment"></i> IPO Allotment</a></li>
           <h2>Others</h2>
