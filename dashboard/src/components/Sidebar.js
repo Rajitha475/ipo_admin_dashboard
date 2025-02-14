@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './style.css'; // Ensure you have the correct path to your CSS file
 
 function Sidebar() {
@@ -9,45 +9,57 @@ function Sidebar() {
       <h2>Menu</h2>
       <ul>
         <li>
-          <Link to="/" className="active">
+          <NavLink  to="/" 
+              exact
+              activeClassName="active-link"
+              className="nav-link">
             <i className="fa-solid fa-chart-simple"></i> Dashboard
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/ManageIpo">
+          <NavLink to="/ManageIpo" 
+              activeClassName="active-link"
+              className="nav-link"
+            >
             <i className="fa-solid fa-cart-shopping"></i> Manage IPO
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="#">
+          <NavLink to="/IpoSubscription"
+              className="nav-link">
             <i className="fa-regular fa-chart-bar"></i> IPO Subscription
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="#">
+          <NavLink to="/IpoAllotment"
+              className="nav-link">
             <i className="fa-regular fa-comment"></i> IPO Allotment
-          </Link>
+          </NavLink>
         </li>
         <h2>Others</h2>
         <li>
-          <Link to="#">
+          <NavLink to="/Settings"
+              className="nav-link">
             <i className="fa-solid fa-gear"></i> Settings
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="#">
+          <NavLink to="/ApiManager" 
+              className="nav-link">
             <i className="fa-regular fa-floppy-disk"></i> API Manager
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="#">
+          <NavLink to="/Accounts"
+              className="nav-link">
             <i className="fa-regular fa-user"></i> Accounts
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="#">
+          <NavLink to="/Help"
+              className="nav-link">
             <i className="fa-regular fa-circle-question"></i> Help
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>
@@ -55,5 +67,4 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
 
