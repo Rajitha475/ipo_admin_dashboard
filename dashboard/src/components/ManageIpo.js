@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './style.css'; // Make sure your CSS file is correctly imported
 
 const ManageIPO = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-ipo">
       <div className="dashboard-container">
         <div className="dashboard-header">
           <h1>Manage IPO</h1>
-    <Link to="/register-ipo">
-          <button>Register IPO</button>
-    </Link>
+          <Link to="/RegisterIpo">
+          <button onClick={() => navigate('/RegisterIpo')}>Register IPO</button>
+          </Link>
         </div>
         <table>
           <thead>
@@ -73,9 +74,29 @@ const ManageIPO = () => {
                 <button>View</button>
               </td>
             </tr>
+            
             {/* Add more rows as needed */}
           </tbody>
+          
+         
         </table>
+        <br></br>
+        <br></br>
+        <table><tbody>
+        <tr>
+              <td>BSE India</td>
+              <td>₹129 - 136</td>
+              <td>2024-06-03</td>
+              <td>2024-06-0</td>
+              <td>Indus tower</td>
+              <td>₹129 - 136</td>
+              <td>2024-06-03</td>
+              <td>2024-06-05</td>
+              <td>130.15 Cr.</td>
+              <td>Book Built</td>
+              <td>2024</td>
+              </tr>
+              </tbody></table>
         <div className="pagination">
           <button>&lt;</button>
           <button className="active">1</button>
@@ -91,3 +112,4 @@ const ManageIPO = () => {
 };
 
 export default ManageIPO;
+
